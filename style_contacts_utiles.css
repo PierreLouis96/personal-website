@@ -1,0 +1,10 @@
+body, html {
+	font-family: 'Roboto';
+}
+
+@media (max-width: 768px) {
+.navbar-brand
+    {
+		transform: translateX(-25%) translateY(-5%);
+    }
+}

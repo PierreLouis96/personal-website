@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contacts utiles</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style_contacts_utiles.css">
+	<link rel="stylesheet" href="style_footer.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="icon" href="favicon.ico" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<meta name="author" content="Pierre-Louis Schnitzler">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- Menu -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid"> 
+  <a class = "navbar-brand pull-left" href="index.html"><img src="favicon.png" alt="Logo"></a>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#myNavbar">       
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="guide.html"><h4>Guides <span class="caret"></span></h4></a>
+			<ul class="dropdown-menu">
+			  <li><a href="guide_timeline.html"><h5>Les grandes étapes</h5></a></li>
+			  <li><a href="#"><h5>Contacts utiles</h5></a></li>
+			  <li><a href="guide_lexique.html"><h5>Lexique de l'immobilier</h5></a></li>
+			</ul>
+		  </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="simulation.html"><h4>Simulateurs <span class="caret"></span></h4></a>
+			<ul class="dropdown-menu">
+			  <li><a href="simulation_budget.html"><h5>Estimez votre budget</h5></a></li>
+			  <li><a href="#"><h5>Acheter ou louer</h5></a></li>
+			  <li><a href="#"><h5>Votre plan de financement</h5></a></li>
+			</ul>
+		  </li>
+        <li><a href="#"><h4>Contact</h4></a></li>
+		
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contacts utiles : Courtiers, Site de recherche de logements neufs/anciens, Sites pour estimer le prix d'un bien--> 
+
+<body style="padding-top: 70px;">
+
+<div class="container" style="min-height:700px;" id="myUL"> 
+	<div class="page-header">
+        <h1 id="timeline">Contacts utiles</h1>
+    </div>
+</div>
+
+<script>
+function filtre() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<!--Bottom Footer-->
+<div class="bottom section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="copyright">
+					<p>© <span>2019</span> <a href="#" class="transition">VescaLabs</a> All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

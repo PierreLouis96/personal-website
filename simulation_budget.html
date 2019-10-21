@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Budget</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style_budget.css">
+	<link rel="stylesheet" href="style_footer.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="icon" href="favicon.ico" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<meta name="author" content="Pierre-Louis Schnitzler">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- Menu -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid"> 
+  <a class = "navbar-brand pull-left" href="index.html"><img src="favicon.png" alt="Logo"></a>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#myNavbar">       
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="guide.html"><h4>Guides <span class="caret"></span></h4></a>
+			<ul class="dropdown-menu">
+			  <li><a href="guide_timeline.html"><h5>Les grandes étapes</h5></a></li>
+			  <li><a href="guide_contact.html"><h5>Contacts utiles</h5></a></li>
+			  <li><a href="guide_lexique.html"><h5>Lexique de l'immobilier</h5></a></li>
+			</ul>
+		  </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="simulation.html"><h4>Simulateurs <span class="caret"></span></h4></a>
+			<ul class="dropdown-menu">
+			  <li><a href="#"><h5>Estimez votre budget</h5></a></li>
+			  <li><a href="#"><h5>Acheter ou louer</h5></a></li>
+			  <li><a href="#"><h5>Votre plan de financement</h5></a></li>
+			</ul>
+		  </li>
+        <li><a href="#"><h4>Contact</h4></a></li>
+		
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding-top: 70px;">
+	<div class="page-header">
+	  <h1>Calculer son budget</h1>
+	</div>
+	<div class="well"><h4>Comment calculer son budget pour l'achat d'un logement ? Combien emprunter à la banque ? Pour définir le budget nécessaire à votre achat immobilier, veuillez saisir vos informations ci-dessous.</h4></div>
+</div>
+
+
+<!-- Simulation -->
+
+<div class="container">
+	
+		<div class="form-group">
+		  <label>Revenus mensuels (€) <a data-toggle="tooltip" title="Ce terme désigne les revenus nets du (ou des) emprunteur(s). Il regroupe les revenus salariés ou assimilés, les pensions perçues, les allocations ou revenus sociaux, les revenus locatifs et financiers."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="revenus" placeholder="ex : 1700" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Taux d'endettement actuel (%) <a data-toggle="tooltip" title="Il s'agit du rapport des charges financières (exemple : crédit à la consommation, crédit auto, versement d'une pension alimentaire...) sur les revenus globaux de l'emprunteur avant d'effectuer son projet immobilier."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="taux_endettement_actuel" placeholder="ex : 0" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Taux d'endettement visé (%) <a data-toggle="tooltip" title="Le chiffre de 33% est souvent considéré comme un « seuil » d'endettement maximal. Des exceptions sont possibles selon le reste à vivre de l'emprunteur."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="taux_endettement_visé" placeholder="ex : 33" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Taux d'intérêt (%) <a data-toggle="tooltip" title="Il s'agit d'un pourcentage perçu par le prêteur, en rémunération du capital prêté à l’emprunteur. Ce taux varie selon l'établissement prêteur, le type de prêt, la durée de l’emprunt. Il est défini lors de la conclusion du contrat de prêt."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="taux_interet" placeholder="ex : 0.9" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Taux d'assurance (%) <a data-toggle="tooltip" title="L'assurance a pour but de garantir le prêteur en cas de décès ou d'invalidité de l'emprunteur. Le taux d'assurance varie notamment selon l'établissement assureur, l'âge de l'emprunteur et les garanties incluses dans le contrat d'assurance (ex : 'décès', 'invalidité totale', ...)."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="taux_assurance" placeholder="ex : 0.2" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Frais de notaire (%) <a data-toggle="tooltip" title="Ils représentent généralement 7-8% du prix du bien s'il s'agit d'un logement ancien et 2-3% pour un logement neuf. Ils sont composés en grande partie des taxes versées au trésor public et des émoluments du notaire."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="frais_notaire" placeholder="ex : 7.5" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Apport personnel (€) <a data-toggle="tooltip" title="C'est l’argent que l'emprunteur va personnellement investir. Il est constitué de la somme des liquidités, de l’épargne et du fruit de la vente de titres que l’emprunteur versera pour acheter un bien."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="apport" placeholder="ex : 20000" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Durée du crédit (années) <a data-toggle="tooltip" title="C'est le nombre de mensualités (somme payée mensuellement) sur lequel l'emprunteur remboursera son crédit immobilier. Plus la durée du prêt est longue, plus le coût de l'emprunt sera élevé."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="durée" placeholder="ex : 12" required>
+		</div>
+		
+		<div class="form-group">
+		  <label>Autres frais (€) <a data-toggle="tooltip" title="Lors d'un achat immobilier, d'autres frais sont à anticiper, dont notamment le coût de potentiels travaux (dans l'ancien), les frais de garantie, les frais de dossier, des frais de courtier..."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+		  <input type="text" class="form-control" id="frais_fixes" placeholder="ex : 5000" required>
+		</div>
+	  
+	  <div><center><button type="button" class="btn btn-primary btn-md" onclick="simulation()">Calculer</button></center></div>
+	  <br>
+	  <div class="well" style="display:none" id="resulat_bloc"><h4 id="simulation" align="center"></h4></div>
+  
+</div>
+
+<script>
+function simulation() {
+  var revenus = parseFloat(document.getElementById("revenus").value);
+  var taux_endettement_visé = parseFloat(document.getElementById("taux_endettement_visé").value)/100;
+  var taux_endettement_actuel = parseFloat(document.getElementById("taux_endettement_actuel").value)/100;
+  var taux_endettement = taux_endettement_visé - taux_endettement_actuel;
+  var durée = parseFloat(document.getElementById("durée").value);
+  var taux_intérêt = parseFloat(document.getElementById("taux_interet").value)/100;
+  var taux_assurance = parseFloat(document.getElementById("taux_assurance").value)/100;
+  var apport = parseFloat(document.getElementById("apport").value);
+  var frais_notaire = parseFloat(document.getElementById("frais_notaire").value)/100;
+  var frais_fixes = parseFloat(document.getElementById("frais_fixes").value);
+  
+  var mensualité = revenus * taux_endettement;
+  var montant_empruntable = parseInt(mensualité*12/(taux_intérêt + taux_assurance)*(1-(1+(taux_intérêt + taux_assurance)/12)**(-12*durée)));
+  var budget = parseInt((apport+montant_empruntable-frais_fixes)/(1+frais_notaire));
+  document.getElementById('resulat_bloc').style.display='block';
+  document.getElementById('simulation').innerHTML = "Votre budget est de "+budget+" euros. Cela correspond à un emprunt de "+montant_empruntable+" euros remboursé avec des mensualités de "+mensualité.toFixed(1)+" euros.";
+  }
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
+<!--Bottom Footer-->
+<div class="bottom section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="copyright">
+					<p>© <span>2019</span> <a href="#" class="transition">VescaLabs</a> All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
