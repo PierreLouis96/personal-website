@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Vesca</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style_index.css">
 	<link rel="stylesheet" href="style_footer.css">
 	<link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
@@ -13,42 +13,6 @@
 	<meta name="author" content="Pierre-Louis Schnitzler">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<!-- Menu -->
-
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #111;">
-  <div class="container-fluid"> 
-  <a class = "navbar-brand pull-left" href="index.html"><img src="favicon.png" alt="Logo"></a>
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#myNavbar">       
-		<span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="guide.html"><h4>Guides <span class="caret"></span></h4></a>
-			<ul class="dropdown-menu">
-			  <li><a href="guide_timeline.html"><h5>Les grandes étapes</h5></a></li>
-			  <li><a href="guide_contact.html"><h5>Contacts utiles</h5></a></li>
-			  <li><a href="guide_lexique.html"><h5>Lexique de l'immobilier</h5></a></li>
-			</ul>
-		  </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="simulation.html"><h4>Simulateurs <span class="caret"></span></h4></a>
-			<ul class="dropdown-menu">
-			  <li><a href="simulation_budget.html"><h5>Estimez votre budget</h5></a></li>
-			  <li><a href="#"><h5>Acheter ou louer</h5></a></li>
-			  <li><a href="#"><h5>Votre plan de financement</h5></a></li>
-			</ul>
-		  </li>
-        <li><a href="#"><h4>Contact</h4></a></li>
-		
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <!-- Animation -->
 
@@ -86,53 +50,85 @@ function showPage() {
 	</div>
 
 <div style="visibility: hidden; display: inline;" id = "myDiv">
+
+	<!-- Menu -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgb(11,26,33);">
+	  <div class="container">
+	    <a class="navbar-brand" href="#" style="font-family: 'Crimson Text';">
+	          <h2>Vesca</h2>
+	        </a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	    <div class="collapse navbar-collapse" id="navbarResponsive">
+	      <ul class="navbar-nav ml-auto">
+	        <li class="nav-item active">
+	          <a class="nav-link" href="#">Accueil</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Guides</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Simulateurs</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Contact</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	
 	<div class="bg-image"></div>
 
 	<div class="bg-text">
-	  <h1 style="font-size:50px;font-family: 'Crimson Text';">Vesca</h1>
-	  <p style="font-size:18px;">Des outils pour mieux maîtriser son projet immobilier</p>
+	  <p style="font-family: 'Crimson Text';font-size:12vh;">Vesca</p>
+	  <h5 style="font-family: 'Crimson Text';font-size:4vh;">Des outils pour mieux maîtriser son projet immobilier</h5>
 	</div>
 	
 	<!-- Section Guides  -->
-	<div class = "container" style="margin-top: 120px">
+	<div class = "container justify-content-center" style="margin-top: 15vh">
 		<center><h1 style="color:white;">Guides</h1></center>
-		<div style="padding:20px;">
+		<div>
 			<center><h4 style="color:white;">Vous êtes novice dans le monde de l'immobilier ? Vous cherchez à apprendre les bases ? Pas de souci ! Les guides ci-dessous sont là pour vous aider.</h4></center>
 		</div>
-		<hr width="15%">
-		<div class="col-md-4">
-			<img src="timeline.png" alt="Timeline" style="width:100%;padding-left:15%;padding-right:15%;padding-top:10%;padding-bottom:10%;"/>
-			<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Les grandes étapes</a>
-		</div>
-		<div class="col-md-4">
-			<img src="phone-book.png" alt="Contacts" style="width:100%;padding-left:15%;padding-right:15%;padding-top:10%;padding-bottom:10%;"/>
-			<a href="guide_contact.html" type="button" class="btn btn-primary btn-lg">Contacts utiles</a>
-		</div>
-		<div class="col-md-4">
-			<img src="open-book.png" alt="Livre" style="width:100%;padding-left:15%;padding-right:15%;padding-top:10%;padding-bottom:10%;"/>
-			<a href="guide_lexique.html" type="button" class="btn btn-primary btn-lg">Lexique de l'immobilier</a>
+		<div class="row">
+			<div class="col-md-4">
+				<img src="timeline.png" alt="Timeline" style="width:100%;padding:15%"/>
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Les grandes étapes</a>
+			</div>
+			<div class="col-md-4">
+				<img src="phone-book.png" alt="Contacts" style="width:100%;padding:15%"/>
+				<a href="guide_contact.html" type="button" class="btn btn-primary btn-lg">Contacts utiles</a>
+			</div>
+			<div class="col-md-4">
+				<img src="open-book.png" alt="Livre" style="width:100%;padding:15%"/>
+				<a href="guide_lexique.html" type="button" class="btn btn-primary btn-lg">Lexique de l'immobilier</a>
+			</div>
 		</div>
 	</div>
 	
 	<!-- Section Simulateurs  -->
 	
-	<div class = "container" style="margin-top: 120px;margin-bottom: 120px">
+	<div class = "container justify-content-center" style="margin-top: 120px;margin-bottom: 120px">
 		<center><h1 style="color:white;">Simulateurs</h1></center>
 		<div style="padding:20px;">
 			<center><h4 style="color:white;">Vous vous lancez dans un projet d'investissement immobilier ? Vous cherchez à calculer votre budget ou optimiser votre plan de financement ? Cette section est faite pour vous.</h4></center>
 		</div>
-		<hr width="15%">
-		<div class="col-md-4">
-			<img src="money-bag.png" alt="Argent" style="width:100%;padding:15%;">
-			<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Estimez votre budget</a>
-		</div>
-		<div class="col-md-4">
-			<img src="comparison.png" alt="Balance" style="width:100%;padding:15%;">
-			<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Acheter ou louer</a>
-		</div>
-		<div class="col-md-4">
-			<img src="speedometer.png" alt="Cadrant" style="width:100%;padding:15%;">
-			<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Votre plan de financement</a>
+		<div class="row">
+			<div class="col-md-4">
+				<img src="money-bag.png" alt="Argent" style="width:100%;padding:15%;">
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Estimez votre budget</a>
+			</div>
+			<div class="col-md-4">
+				<img src="comparison.png" alt="Balance" style="width:100%;padding:15%;">
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Acheter ou louer</a>
+			</div>
+			<div class="col-md-4">
+				<img src="speedometer.png" alt="Cadrant" style="width:100%;padding:15%;">
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Votre plan de financement</a>
+			</div>
 		</div>
 	</div>
 	
@@ -142,7 +138,7 @@ function showPage() {
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<div class="copyright">
-						<p>© <span>2019</span> <a href="#" class="transition">VescaLabs</a> All rights reserved.</p>
+						<p>© <span><script>document.write(new Date().getFullYear())</script></span> <a href="#" class="transition">VescaLabs</a> All rights reserved.</p>
 					</div>
 				</div>
 			</div>

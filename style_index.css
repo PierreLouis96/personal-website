@@ -1,15 +1,12 @@
-@media (max-width: 768px) {
-.navbar-brand
-    {
-		transform: translateX(-25%) translateY(-5%);
-    }
-}
-
 body, html {
 	background-color: rgb(11,26,33);
 	height: 100%;
 	margin: 0;
 	font-family: 'Roboto';
+}
+
+.navbar-collapse.collapse.in {
+  display: block!important;
 }
 
 .bg-image {
