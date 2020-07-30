@@ -3,47 +3,54 @@
 <head>
 <title>Lexique</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style_lexique.css">
 	<link rel="stylesheet" href="style_footer.css">
+	<link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<link rel="icon" href="favicon.ico" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<meta name="author" content="Pierre-Louis Schnitzler">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <!-- Menu -->
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid"> 
-  <a class = "navbar-brand pull-left" href="index.html"><img src="favicon.png" alt="Logo"></a>
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#myNavbar">       
-		<span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="guide.html"><h4>Guides <span class="caret"></span></h4></a>
-			<ul class="dropdown-menu">
-			  <li><a href="guide_timeline.html"><h5>Les grandes étapes</h5></a></li>
-			  <li><a href="guide_contact.html"><h5>Contacts utiles</h5></a></li>
-			  <li><a href="#"><h5>Lexique de l'immobilier</h5></a></li>
-			</ul>
-		  </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="simulation.html"><h4>Simulateurs <span class="caret"></span></h4></a>
-			<ul class="dropdown-menu">
-			  <li><a href="simulation_budget.html"><h5>Estimez votre budget</h5></a></li>
-			  <li><a href="#"><h5>Acheter ou louer</h5></a></li>
-			  <li><a href="#"><h5>Votre plan de financement</h5></a></li>
-			</ul>
-		  </li>
-        <li><a href="#"><h4>Contact</h4></a></li>
-		
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id = "navbar1" style="background-color:rgb(11,26,33);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html" style="font-family: 'Crimson Text';">
+          <h2>Vesca</h2>
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Guides
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="guide_timeline.html">Les grandes étapes</a>
+            <a class="dropdown-item" href="guide_contact.html">Contacts utiles</a>
+            <a class="dropdown-item" href="#">Lexique de l'immobilier</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Simulateurs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="simulation_budget.html">Estimez votre budget</a>
+            <a class="dropdown-item" href="#">Acheter ou louer</a>
+            <a class="dropdown-item" href="#">Votre plan de financement</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -51,152 +58,135 @@
 
 <!-- Lexique -->
 
-<body style="padding-top: 70px;">
+<body style="padding-top: 70px;font-family:'Roboto';">
 
-<div class="container" style="min-height:700px;" id="myUL"> <!-- Ajuster quand je rajoute des définitions -->
-	<div class="page-header">
-        <h1 id="timeline">Lexique de l'immobilier</h1>
-    </div>
-	
-	<input type="text" id="myInput" onkeyup="filtre()" placeholder="Chercher un mot dans le lexique">
-		
-	
-	<div class="panel">
-		<li><a data-toggle="collapse" href="#acte" data-parent="#myUL" role="button" aria-expanded="false">Acte de vente</a>
-		<div class="collapse" id="acte">
-			<div class="panel-body">
-				Il peut être signé dès que toutes les conditions sont réunies. La signature de l'acte se fera devant notaire.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#apport" data-parent="#myUL" role="button" aria-expanded="false">Apport personnel</a>
-		<div class="collapse" id="apport">
-			<div class="panel-body">
-				C'est l’argent que l'emprunteur va personnellement investir. Il est constitué de la somme des liquidités, de l’épargne et du fruit de la vente de titres que l’emprunteur versera pour acheter un bien.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#compromis" data-parent="#myUL" role="button" aria-expanded="false">Compromis de vente</a>
-		<div class="collapse" id="compromis">
-			<div class="panel-body">
-				Il s'agit de l’acte par lequel le vendeur s’engage à vendre un bien immobilier à un acheteur. Il précise les conditions de la vente du bien (notamment le prix et les délais). Le compromis est généralement assorti du versement d’un acompte. Le compromis rend la vente ferme et définitive (sauf cas de conditions suspensives).
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#contrat" data-parent="#myUL" role="button" aria-expanded="false">Contrat de réservation</a>
-		<div class="collapse" id="contrat">
-			<div class="panel-body">
-				C’est un contrat par lequel un promoteur s’engage à réserver un logement neuf ou en construction à un acquéreur qui doit en contrepartie verser un dépôt de garantie. Le contrat doit contenir un certain nombre de mentions obligatoires sur le bien vendu, son prix et les modalités de sa révision.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#durée" data-parent="#myUL" role="button" aria-expanded="false">Durée du crédit</a>
-		<div class="collapse" id="durée">
-			<div class="panel-body">
-				C'est le nombre de mensualités sur lequel l'emprunteur remboursera son crédit immobilier. Plus la durée du prêt est longue, plus le coût de l'emprunt sera élevé.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#délairétractation" data-parent="#myUL" role="button" aria-expanded="false">Délai de rétractation</a>
-		<div class="collapse" id="délairétractation">
-			<div class="panel-body">
-				Prévu dans la loi SRU lors d'une promesse ou d'un compromis de vente est de sept jours.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#fraisdossier" data-parent="#myUL" role="button" aria-expanded="false">Frais de dossier</a>
-		<div class="collapse" id="fraisdossier">
-			<div class="panel-body">
-				Frais demandés par les établissements financiers pour la mise en place d'un prêt immobilier.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#fraisnotaires" data-parent="#myUL" role="button" aria-expanded="false">Frais de notaires</a>
-		<div class="collapse" id="fraisnotaires">
-			<div class="panel-body">
-				Ils représentent généralement 7-8% du prix du bien s'il s'agit d'un logement ancien et 2-3% pour un logement neuf. Ils sont composés en grande partie des taxes versées au trésor public et des émoluments du notaire.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#mensualité" data-parent="#myUL" role="button" aria-expanded="false">Mensualité</a>
-		<div class="collapse" id="mensualité">
-			<div class="panel-body">
-				Somme payée chaque mois pour rembourser un emprunt. Dans le cas d’un prêt amortissable, la mensualité est constituée en partie de remboursement de capital et en partie d’intérêts et de frais financiers. La part des intérêts décroît avec le temps au profit du capital.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#notaire" data-parent="#myUL" role="button" aria-expanded="false">Notaire</a>
-		<div class="collapse" id="notaire">
-			<div class="panel-body">
-				Officier ministériel chargé de recevoir ou de rédiger des actes et des contrats, leur conférant ainsi l'authenticité qui les rend incontestables.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#pretamortissable" data-parent="#myUL" role="button" aria-expanded="false">Prêt amortissable</a>
-		<div class="collapse" id="pretamortissable">
-			<div class="panel-body">
-				Il s'agit de la majorité des prêts octroyés par les banques en France. Contrairement aux prêts in fine, le remboursement du capital est étalé dans le temps et n’est pas effectué en une seule fois. Pendant la durée du prêt, l’emprunteur doit rembourser le capital et les intérêts.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#pretinfine" data-parent="#myUL" role="button" aria-expanded="false">Prêt in fine</a>
-		<div class="collapse" id="pretinfine">
-			<div class="panel-body">
-				Le prêt in fine est un crédit immobilier à taux fixe non amortissable pour lequel l’emprunteur ne rembourse que les intérêts pendant sa durée. Le capital emprunté reste intact jusqu’au terme du crédit et, à l’échéance, le Client le rembourse en une seule fois. Il présente un avantage d’ordre fiscal et s’adresse aux personnes fortement imposées (en général taux marginal d’imposition supérieur à 45%) et est destiné – en règle générale – à financer un bien à usage locatif ou défiscalisant.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#revenus" data-parent="#myUL" role="button" aria-expanded="false">Revenus</a>
-		<div class="collapse" id="revenus">
-			<div class="panel-body">
-				Ce terme désigne les revenus nets du (ou des) emprunteur(s). Il regroupe les revenus salariés ou assimilés, les pensions perçues, les allocations ou revenus sociaux, les revenus f et financiers.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#tauxendettementactuel" data-parent="#myUL" role="button" aria-expanded="false">Taux d'endettement actuel</a>
-		<div class="collapse" id="tauxendettementactuel">
-			<div class="panel-body">
-				Il s'agit du rapport des charges financières (exemple : crédit à la consommation, crédit auto, versement d'une pension alimentaire...) sur les revenus globaux de l'emprunteur avant d'effectuer son projet immobilier.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#tauxendettementvisé" data-parent="#myUL" role="button" aria-expanded="false">Taux d'endettement visé</a>
-		<div class="collapse" id="tauxendettementvisé">
-			<div class="panel-body">
-				Le chiffre de 33% est souvent considéré comme un « seuil » d'endettement maximal. Des exceptions sont possibles selon le reste à vivre de l'emprunteur.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#tauxassurance" data-parent="#myUL" role="button" aria-expanded="false">Taux d'assurance</a>
-		<div class="collapse" id="tauxassurance">
-			<div class="panel-body">
-				L'assurance a pour but de garantir le prêteur en cas de décès ou d'invalidité de l'emprunteur. Le taux d'assurance varie notamment selon l'établissement assureur, l'âge de l'emprunteur et les garanties incluses dans le contrat d'assurance (ex : 'décès', 'invalidité totale', ...).
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#tauxintérêt" data-parent="#myUL" role="button" aria-expanded="false">Taux d'intérêt</a>
-		<div class="collapse" id="tauxintérêt">
-			<div class="panel-body">
-				Il s'agit d'un pourcentage perçu par le prêteur, en rémunération du capital prêté à l’emprunteur. Ce taux varie selon l'établissement prêteur, le type de prêt, la durée de l’emprunt. Il est défini lors de la conclusion du contrat de prêt.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#taxefonciere" data-parent="#myUL" role="button" aria-expanded="false">Taxe foncière</a>
-		<div class="collapse" id="taxefonciere">
-			<div class="panel-body">
-				Taxe due par toute personne propriétaire du bien immobilier (y compris les terrains) au 1er janvier de l'année.
-			</div>
-		</div></li>
-		<li><a data-toggle="collapse" href="#taxehabitation" data-parent="#myUL" role="button" aria-expanded="false">Taxe d'habitation</a>
-		<div class="collapse" id="taxehabitation">
-			<div class="panel-body">
-				Taxe calculée sur le même mode que la taxe foncière, est payée par la personne, propriétaire ou locataire, qui occupe les lieux.
-			</div>
-		</div></li>
-	</div>	
-	
+<div class="container" style="padding-bottom:5vh;min-height:700px;">
+    <div class="page-header">
+        <center style="font-family: 'Crimson Text';font-size:10vh;padding-top:10vh;padding-bottom:8vh">Lexique de l'immobilier</center>
+    </div> 
+    <input class="form-control" id="myInput" type="text" placeholder="Cherchez un mot dans le lexique...">
+    <br>
+    <ul class="list-group" id="myList">
+    	<li class="list-group-item" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Acte de vente</li>
+    	<div class="collapse" id="collapse1">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Il peut être signé dès que toutes les conditions sont réunies. La signature de l'acte se fera devant notaire.
+		  </div>
+		</div>
+    	<li class="list-group-item" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Apport personnel</li>
+    	<div class="collapse" id="collapse2">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    C'est l’argent que l'emprunteur va personnellement investir. Il est constitué de la somme des liquidités, de l’épargne et du fruit de la vente de titres que l’emprunteur versera pour acheter un bien.
+		  </div>
+		</div>
+    	<li class="list-group-item" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Compromis de vente</li>
+    	<div class="collapse" id="collapse3">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Il s'agit de l’acte par lequel le vendeur s’engage à vendre un bien immobilier à un acheteur. Il précise les conditions de la vente du bien (notamment le prix et les délais). Le compromis est généralement assorti du versement d’un acompte. Le compromis rend la vente ferme et définitive (sauf cas de conditions suspensives)
+		  </div>
+		</div>
+    	<li class="list-group-item" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Contrat de réservation</li>
+    	<div class="collapse" id="collapse4">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    C’est un contrat par lequel un promoteur s’engage à réserver un logement neuf ou en construction à un acquéreur qui doit en contrepartie verser un dépôt de garantie. Le contrat doit contenir un certain nombre de mentions obligatoires sur le bien vendu, son prix et les modalités de sa révision.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Durée du crédit</li>
+    	<div class="collapse" id="collapse5">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    C'est le nombre de mensualités sur lequel l'emprunteur remboursera son crédit immobilier. Plus la durée du prêt est longue, plus le coût de l'emprunt sera élevé.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Délai de rétractation</li>
+    	<div class="collapse" id="collapse6">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Prévu dans la loi SRU lors d'une promesse ou d'un compromis de vente est de sept jours.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Frais de dossier</li>
+    	<div class="collapse" id="collapse7">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Frais demandés par les établissements financiers pour la mise en place d'un prêt immobilier.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Frais de notaires</li>
+    	<div class="collapse" id="collapse8">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Ils représentent généralement 7-8% du prix du bien s'il s'agit d'un logement ancien et 2-3% pour un logement neuf. Ils sont composés en grande partie des taxes versées au trésor public et des émoluments du notaire.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Mensualités</li>
+    	<div class="collapse" id="collapse9">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Somme payée chaque mois pour rembourser un emprunt. Dans le cas d’un prêt amortissable, la mensualité est constituée en partie de remboursement de capital et en partie d’intérêts et de frais financiers. La part des intérêts décroît avec le temps au profit du capital.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Prêt amortissable</li>
+    	<div class="collapse" id="collapse10">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Il s'agit de la majorité des prêts octroyés par les banques en France. Contrairement aux prêts in fine, le remboursement du capital est étalé dans le temps et n’est pas effectué en une seule fois. Pendant la durée du prêt, l’emprunteur doit rembourser le capital et les intérêts.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Notaire</li>
+    	<div class="collapse" id="collapse11">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Officier ministériel chargé de recevoir ou de rédiger des actes et des contrats, leur conférant ainsi l'authenticité qui les rend incontestables.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Revenus</li>
+    	<div class="collapse" id="collapse12">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Ce terme désigne les revenus nets du (ou des) emprunteur(s). Il regroupe les revenus salariés ou assimilés, les pensions perçues, les allocations ou revenus sociaux, les revenus f et financiers.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Taux d'endettement actuel</li>
+    	<div class="collapse" id="collapse13">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Il s'agit du rapport des charges financières (exemple : crédit à la consommation, crédit auto, versement d'une pension alimentaire...) sur les revenus globaux de l'emprunteur avant d'effectuer son projet immobilier.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Taux d'endettement visé</li>
+    	<div class="collapse" id="collapse14">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Le chiffre de 33% est souvent considéré comme un « seuil » d'endettement maximal. Des exceptions sont possibles selon le reste à vivre de l'emprunteur.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Taux d'assurance</li>
+    	<div class="collapse" id="collapse15">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    L'assurance a pour but de garantir le prêteur en cas de décès ou d'invalidité de l'emprunteur. Le taux d'assurance varie notamment selon l'établissement assureur, l'âge de l'emprunteur et les garanties incluses dans le contrat d'assurance (ex : 'décès', 'invalidité totale', ...).
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Taux d'intérêt</li>
+    	<div class="collapse" id="collapse16">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Il s'agit d'un pourcentage perçu par le prêteur, en rémunération du capital prêté à l’emprunteur. Ce taux varie selon l'établissement prêteur, le type de prêt, la durée de l’emprunt. Il est défini lors de la conclusion du contrat de prêt.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Taxe foncière</li>
+    	<div class="collapse" id="collapse17">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Taxe due par toute personne propriétaire du bien immobilier (y compris les terrains) au 1er janvier de l'année.
+		  </div>
+		</div>
+		<li class="list-group-item" data-toggle="collapse" data-target="#collapse18" aria-expanded="false" aria-controls="collapse18" style ="cursor:pointer;background-color:#f2f2f2;font-size:3vh">Taxe d'habitation</li>
+    	<div class="collapse" id="collapse18">
+		  <div class="card card-body" style="font-size:2.5vh">
+		    Taxe calculée sur le même mode que la taxe foncière, est payée par la personne, propriétaire ou locataire, qui occupe les lieux.
+		  </div>
+		</div>
+  </ul>  
 </div>
 
 <script>
-function filtre() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 </script>
 
 <!--Bottom Footer-->

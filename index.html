@@ -9,7 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<link rel="icon" href="favicon.ico" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<meta name="author" content="Pierre-Louis Schnitzler">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -29,7 +29,7 @@ function showPage() {
 }
 </script>
 
-<body onload="myFunction()">
+<body onload="myFunction()" data-spy="scroll" data-target="#navbar1" data-offset="50">
 
 <div class="cssload-loader-inner" id="loader">
 		<div class="cssload-cssload-loader-line-wrap-wrap">
@@ -53,7 +53,7 @@ function showPage() {
 
 	<!-- Menu -->
 
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgb(11,26,33);">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id = "navbar1" style="background-color:rgb(11,26,33);">
 	  <div class="container">
 	    <a class="navbar-brand" href="#" style="font-family: 'Crimson Text';">
 	          <h2>Vesca</h2>
@@ -63,24 +63,24 @@ function showPage() {
 	        </button>
 	    <div class="collapse navbar-collapse" id="navbarResponsive">
 	      <ul class="navbar-nav ml-auto">
-	        <li class="nav-item active">
-	          <a class="nav-link" href="#">Accueil</a>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#accueil">Accueil</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">Guides</a>
+	          <a class="nav-link" href="#guides">Guides</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">Simulateurs</a>
+	          <a class="nav-link" href="#simulateurs">Simulateurs</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">Contact</a>
+	          <a class="nav-link" href="#contact">Contact</a>
 	        </li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
-	
-	<div class="bg-image"></div>
+
+	<div class="bg-image" id="accueil"></div>
 
 	<div class="bg-text">
 	  <p style="font-family: 'Crimson Text';font-size:12vh;">Vesca</p>
@@ -88,48 +88,66 @@ function showPage() {
 	</div>
 	
 	<!-- Section Guides  -->
-	<div class = "container justify-content-center" style="margin-top: 15vh">
-		<center><h1 style="color:white;">Guides</h1></center>
+
+	<div class = "container justify-content-center" style="padding-top: 10vh" id="guides">
+		<center><p style="color:white;font-family: 'Crimson Text';font-size:10vh;">Guides</p></center>
 		<div>
-			<center><h4 style="color:white;">Vous êtes novice dans le monde de l'immobilier ? Vous cherchez à apprendre les bases ? Pas de souci ! Les guides ci-dessous sont là pour vous aider.</h4></center>
+			<center><p style="color:white;font-size:3vh;padding-right:5%;padding-left:5%">Vous êtes novice dans le monde de l'immobilier ? Vous cherchez à apprendre les bases ? Pas de souci ! Les guides ci-dessous sont là pour vous aider.</p></center>
 		</div>
 		<div class="row">
-			<div class="col-md-4">
-				<img src="timeline.png" alt="Timeline" style="width:100%;padding:15%"/>
-				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Les grandes étapes</a>
+			<div class="col-md-4" style="padding:5vh;">
+				<img src="timeline.png" alt="Timeline" style="width:100%;"/>
+				<hr>
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Les grandes étapes</a>
 			</div>
-			<div class="col-md-4">
-				<img src="phone-book.png" alt="Contacts" style="width:100%;padding:15%"/>
-				<a href="guide_contact.html" type="button" class="btn btn-primary btn-lg">Contacts utiles</a>
+			<div class="col-md-4" style="padding:5vh;">
+				<img src="phone-book.png" alt="Contacts" style="width:100%;"/>
+				<hr>
+				<a href="guide_contact.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Contacts utiles</a>
 			</div>
-			<div class="col-md-4">
-				<img src="open-book.png" alt="Livre" style="width:100%;padding:15%"/>
-				<a href="guide_lexique.html" type="button" class="btn btn-primary btn-lg">Lexique de l'immobilier</a>
+			<div class="col-md-4" style="padding:5vh;">
+				<img src="open-book.png" alt="Livre" style="width:100%;"/>
+				<hr>
+				<a href="guide_lexique.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Lexique de l'immobilier</a>
 			</div>
 		</div>
 	</div>
 	
 	<!-- Section Simulateurs  -->
 	
-	<div class = "container justify-content-center" style="margin-top: 120px;margin-bottom: 120px">
-		<center><h1 style="color:white;">Simulateurs</h1></center>
-		<div style="padding:20px;">
-			<center><h4 style="color:white;">Vous vous lancez dans un projet d'investissement immobilier ? Vous cherchez à calculer votre budget ou optimiser votre plan de financement ? Cette section est faite pour vous.</h4></center>
+	<div class = "container justify-content-center" style="padding-top: 10vh" id="simulateurs">
+		<center><p style="color:white;font-family: 'Crimson Text';font-size:10vh;">Simulateurs</p></center>
+		<div>
+			<center><p style="color:white;font-size:3vh;padding-right:5%;padding-left:5%">Vous vous lancez dans un projet d'investissement immobilier ? Vous cherchez à calculer votre budget ou optimiser votre plan de financement ? Cette section est faite pour vous.</p></center>
 		</div>
 		<div class="row">
-			<div class="col-md-4">
-				<img src="money-bag.png" alt="Argent" style="width:100%;padding:15%;">
-				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Estimez votre budget</a>
+			<div class="col-md-4" style="padding:5vh;">
+				<img src="money-bag.png" alt="Argent" style="width:100%;">
+				<hr>
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Estimez votre budget</a>
 			</div>
-			<div class="col-md-4">
-				<img src="comparison.png" alt="Balance" style="width:100%;padding:15%;">
-				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Acheter ou louer</a>
+			<div class="col-md-4" style="padding:5vh;">
+				<img src="comparison.png" alt="Balance" style="width:100%;">
+				<hr>
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Acheter ou louer</a>
 			</div>
-			<div class="col-md-4">
-				<img src="speedometer.png" alt="Cadrant" style="width:100%;padding:15%;">
-				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg">Votre plan de financement</a>
+			<div class="col-md-4" style="padding:5vh;">
+				<img src="speedometer.png" alt="Cadrant" style="width:100%;">
+				<hr>
+				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Votre plan de financement</a>
 			</div>
 		</div>
+	</div>
+
+	<!--Contact-->
+
+	<div class = "row justify-content-center" style="margin-top: 10vh;background-image:url(blured_skyline.jpg);height:100%;width:100%;background-position: center;background-repeat: no-repeat;background-size: cover;" id="contact">
+		<div class="align-self-center">
+			<center><p style="color:white;font-family: 'Crimson Text';font-size:10vh;">Contact</p></center>
+			<center><p style="color:white;font-size:3vh;padding-right:5%;padding-left:5%;padding-bottom:3vh">Vous avez des questions ? Des suggestions ? Ou des idées d'améliorations ?</p></center>
+
+			<center><a class="typeform-share button btn-primary" href="https://form.typeform.com/to/OnCJDoro" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#87593F;color:white;cursor:pointer;font-family:Roboto,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:7px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Nous écrire </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script><center>
+			</div>
 	</div>
 	
 	<!--Bottom Footer-->

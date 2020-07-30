@@ -5,6 +5,7 @@ body, html {
 	font-family: 'Roboto';
 }
 
+/*Avoid navbar collapse error*/
 .navbar-collapse.collapse.in {
   display: block!important;
 }
@@ -41,12 +42,14 @@ body, html {
 .btn-primary, .btn-primary:active, .btn:focus, .btn-primary:visited {
     background-color: rgb(135,89,63) !important;
     border:none;
-    width:100%;
+    font-size:3vh;
 }
 
 .btn-primary:hover{
     background-color: rgb(235,168,108) !important;
     border:none;
+    font-size:3vh;
+    outline: none !important;
 }
 
 .cssload-loader-inner {
