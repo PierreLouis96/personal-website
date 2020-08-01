@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Budget</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style_footer.css">
+	<link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="icon" href="favicon.ico" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<meta name="author" content="Pierre-Louis Schnitzler">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- Menu -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id = "navbar1" style="background-color:rgb(11,26,33);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html" style="font-family: 'Crimson Text';">
+          <h2>Vesca</h2>
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Guides
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="guide_timeline.html">Les grandes étapes</a>
+            <a class="dropdown-item" href="guide_contact.html">Contacts utiles</a>
+            <a class="dropdown-item" href="guide_lexique.html">Lexique de l'immobilier</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Simulateurs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="simulation_budget.html">Estimez votre budget</a>
+            <a class="dropdown-item" href="simulation_acheterlouer.html">Acheter ou louer</a>
+            <a class="dropdown-item" href="#">Votre plan de financement</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body style="padding-top: 70px;font-family:Roboto">
+
+<div class="container" style="padding-bottom:5vh;min-height:700px;">
+    <div class="page-header">
+        <center style="font-family: 'Crimson Text';font-size:10vh;padding-top:10vh;padding-bottom:6vh">En construction</center>
+    </div>
+
+
+</div>
+
+<script>
+function simulation() {
+  var revenus = parseFloat(document.getElementById("revenus").value);
+  var taux_endettement_visé = parseFloat(document.getElementById("taux_endettement_visé").value)/100;
+  var taux_endettement_actuel = parseFloat(document.getElementById("taux_endettement_actuel").value)/100;
+  var taux_endettement = taux_endettement_visé - taux_endettement_actuel;
+  var durée = parseFloat(document.getElementById("durée").value);
+  var taux_intérêt = parseFloat(document.getElementById("taux_interet").value)/100;
+  var taux_assurance = parseFloat(document.getElementById("taux_assurance").value)/100;
+  var apport = parseFloat(document.getElementById("apport").value);
+  var frais_notaire = parseFloat(document.getElementById("frais_notaire").value)/100;
+  var frais_fixes = parseFloat(document.getElementById("frais_fixes").value);
+  
+  var mensualité = revenus * taux_endettement;
+  var montant_empruntable = parseInt(mensualité*12/(taux_intérêt + taux_assurance)*(1-(1+(taux_intérêt + taux_assurance)/12)**(-12*durée)));
+  var budget = parseInt((apport+montant_empruntable-frais_fixes)/(1+frais_notaire));
+  document.getElementById('resulat_bloc').style.display='block';
+  document.getElementById('simulation').innerHTML = "Votre budget est de "+budget+" euros. Cela correspond à un emprunt de "+montant_empruntable+" euros remboursé avec des mensualités de "+mensualité.toFixed(1)+" euros.";
+  }
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
+
+<!--Bottom Footer-->
+<div class="bottom section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="copyright">
+					<p>© <span><script>document.write(new Date().getFullYear())</script></span> <a href="#" class="transition">VescaLabs</a> All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -4,6 +4,7 @@
 <title>Budget</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style_footer.css">
+	<link rel="stylesheet" href="style_budget.css">
 	<link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<link rel="icon" href="favicon.ico" />
@@ -11,9 +12,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<meta name="author" content="Pierre-Louis Schnitzler">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
-
-<body>
 
 <!-- Menu -->
 
@@ -30,84 +30,194 @@
         <li class="nav-item">
           <a class="nav-link" href="index.html">Accueil</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#guides">Guides</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Guides
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="guide_timeline.html">Les grandes étapes</a>
+            <a class="dropdown-item" href="guide_contact.html">Contacts utiles</a>
+            <a class="dropdown-item" href="guide_lexique.html">Lexique de l'immobilier</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Simulateurs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Estimez votre budget</a>
+            <a class="dropdown-item" href="simulation_acheterlouer.html">Acheter ou louer</a>
+            <a class="dropdown-item" href="simulation_plan.html">Votre plan de financement</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#simulateurs">Simulateurs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="index.html#contact">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container" style="padding-top: 70px;">
-	<div class="page-header">
-	  <h1>Calculer son budget</h1>
-	</div>
-	<div class="well"><h4>Comment calculer son budget pour l'achat d'un logement ? Combien emprunter à la banque ? Pour définir le budget nécessaire à votre achat immobilier, veuillez saisir vos informations ci-dessous.</h4></div>
-</div>
+<body style="padding-top: 70px;font-family:Roboto">
+
+<div class="container" style="padding-bottom:5vh;min-height:700px;">
+    <div class="page-header">
+        <center style="font-family: 'Crimson Text';font-size:10vh;padding-top:10vh;padding-bottom:6vh">Calculer son budget</center>
+    </div>
 
 
 <!-- Simulation -->
 
-<div class="container">
+	<form class="needs-validation" novalidate>
+
+		<div class="form-row" style="margin-right: 15px;margin-left: 15px;">
+
+			<div class="col-md-4">
+				<center><label for="revenus">Revenus mensuels (€)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="Ce terme désigne les revenus nets du (ou des) emprunteur(s). Il regroupe les revenus salariés ou assimilés, les pensions perçues, les allocations ou revenus sociaux, les revenus locatifs et financiers.">
+				  <img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="revenus" placeholder="ex : 1700" style="margin-top:5px" required>
+				<br>
+			</div>
+
+			<div class="col-md-4">
+				<center><label for="taux_endettement_actuel">Taux d'endettement actuel (%)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="Il s'agit du rapport des charges financières (exemple : crédit à la consommation, crédit auto, versement d'une pension alimentaire...) sur les revenus globaux de l'emprunteur avant d'effectuer son projet immobilier.">
+				  <img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="taux_endettement_actuel" placeholder="ex : 0" style="margin-top:5px" required>
+				<br>
+			</div>
+
+			<div class="col-md-4">
+				<center><label for="taux_endettement_visé">Taux d'endettement visé (%)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="Le chiffre de 33% est souvent considéré comme un « seuil » d'endettement maximal. Des exceptions sont possibles selon le reste à vivre de l'emprunteur.">
+					<img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="taux_endettement_visé" placeholder="ex : 33" style="margin-top:5px" required>
+				<br>
+			</div>
+		</div>
+
+		<div class="form-row" style="margin-right: 15px;margin-left: 15px;">
+
+			<div class="col-md-4">
+				<center><label for="taux_interet">Taux d'intérêt (%)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="Il s'agit d'un pourcentage perçu par le prêteur, en rémunération du capital prêté à l’emprunteur. Ce taux varie selon l'établissement prêteur, le type de prêt, la durée de l’emprunt. Il est défini lors de la conclusion du contrat de prêt.">
+				  <img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="taux_interet" placeholder="ex : 0.9" style="margin-top:5px" required>
+				<br>
+			</div>
+
+			<div class="col-md-4">
+				<center><label for="taux_assurance">Taux d'assurance (%)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="L'assurance a pour but de garantir le prêteur en cas de décès ou d'invalidité de l'emprunteur. Le taux d'assurance varie notamment selon l'établissement assureur, l'âge de l'emprunteur et les garanties incluses dans le contrat d'assurance (ex : 'décès', 'invalidité totale', ...).">
+				  <img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="taux_assurance" placeholder="ex : 0.2" style="margin-top:5px" required>
+				<br>
+			</div>
+
+			<div class="col-md-4">
+				<center><label for="frais_notaire">Frais de notaire (%)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="Ils représentent généralement 7-8% du prix du bien s'il s'agit d'un logement ancien et 2-3% pour un logement neuf. Ils sont composés en grande partie des taxes versées au trésor public et des émoluments du notaire.">
+					<img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="frais_notaire" placeholder="ex : 7.5" style="margin-top:5px" required>
+				<br>
+			</div>
+		</div>
+
+		<div class="form-row" style="margin-right: 15px;margin-left: 15px;">
+
+			<div class="col-md-4">
+				<center><label for="apport">Apport personnel (€)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="C'est l’argent que l'emprunteur va personnellement investir. Il est constitué de la somme des liquidités, de l’épargne et du fruit de la vente de titres que l’emprunteur versera pour acheter un bien.">
+				  <img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="apport" placeholder="ex : 20000" style="margin-top:5px" required>
+				<br>
+			</div>
+
+			<div class="col-md-4">
+				<center><label for="durée">Durée du crédit (années)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="C'est le nombre de mensualités (somme payée mensuellement) sur lequel l'emprunteur remboursera son crédit immobilier. Plus la durée du prêt est longue, plus le coût de l'emprunt sera élevé.">
+				  <img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="durée" placeholder="ex : 12" style="margin-top:5px" required>
+				<br>
+			</div>
+
+			<div class="col-md-4">
+				<center><label for="frais_fixes">Autres frais (€)</label>
+				<a type="button" data-toggle="tooltip" data-placement="bottom" title="Lors d'un achat immobilier, d'autres frais sont à anticiper, dont notamment le coût de potentiels travaux (dans l'ancien), les frais de garantie, les frais de dossier, des frais de courtier...">
+					<img src="info.png" alt="info" style="width:3vh;">
+				</a></center>
+				<input type="text" class="form-control" id="frais_fixes" placeholder="ex : 5000" style="margin-top:5px" required>
+				<br>
+			</div>
+		</div>
 	
-		<div class="form-group">
-		  <label>Revenus mensuels (€) <a data-toggle="tooltip" title="Ce terme désigne les revenus nets du (ou des) emprunteur(s). Il regroupe les revenus salariés ou assimilés, les pensions perçues, les allocations ou revenus sociaux, les revenus locatifs et financiers."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="revenus" placeholder="ex : 1700" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Taux d'endettement actuel (%) <a data-toggle="tooltip" title="Il s'agit du rapport des charges financières (exemple : crédit à la consommation, crédit auto, versement d'une pension alimentaire...) sur les revenus globaux de l'emprunteur avant d'effectuer son projet immobilier."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="taux_endettement_actuel" placeholder="ex : 0" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Taux d'endettement visé (%) <a data-toggle="tooltip" title="Le chiffre de 33% est souvent considéré comme un « seuil » d'endettement maximal. Des exceptions sont possibles selon le reste à vivre de l'emprunteur."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="taux_endettement_visé" placeholder="ex : 33" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Taux d'intérêt (%) <a data-toggle="tooltip" title="Il s'agit d'un pourcentage perçu par le prêteur, en rémunération du capital prêté à l’emprunteur. Ce taux varie selon l'établissement prêteur, le type de prêt, la durée de l’emprunt. Il est défini lors de la conclusion du contrat de prêt."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="taux_interet" placeholder="ex : 0.9" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Taux d'assurance (%) <a data-toggle="tooltip" title="L'assurance a pour but de garantir le prêteur en cas de décès ou d'invalidité de l'emprunteur. Le taux d'assurance varie notamment selon l'établissement assureur, l'âge de l'emprunteur et les garanties incluses dans le contrat d'assurance (ex : 'décès', 'invalidité totale', ...)."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="taux_assurance" placeholder="ex : 0.2" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Frais de notaire (%) <a data-toggle="tooltip" title="Ils représentent généralement 7-8% du prix du bien s'il s'agit d'un logement ancien et 2-3% pour un logement neuf. Ils sont composés en grande partie des taxes versées au trésor public et des émoluments du notaire."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="frais_notaire" placeholder="ex : 7.5" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Apport personnel (€) <a data-toggle="tooltip" title="C'est l’argent que l'emprunteur va personnellement investir. Il est constitué de la somme des liquidités, de l’épargne et du fruit de la vente de titres que l’emprunteur versera pour acheter un bien."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="apport" placeholder="ex : 20000" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Durée du crédit (années) <a data-toggle="tooltip" title="C'est le nombre de mensualités (somme payée mensuellement) sur lequel l'emprunteur remboursera son crédit immobilier. Plus la durée du prêt est longue, plus le coût de l'emprunt sera élevé."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="durée" placeholder="ex : 12" required>
-		</div>
-		
-		<div class="form-group">
-		  <label>Autres frais (€) <a data-toggle="tooltip" title="Lors d'un achat immobilier, d'autres frais sont à anticiper, dont notamment le coût de potentiels travaux (dans l'ancien), les frais de garantie, les frais de dossier, des frais de courtier..."><span class="glyphicon glyphicon-info-sign"></span></a></label>
-		  <input type="text" class="form-control" id="frais_fixes" placeholder="ex : 5000" required>
-		</div>
-	  
-	  <div><center><button type="button" class="btn btn-primary btn-md" onclick="simulation()">Calculer</button></center></div>
-	  <br>
-	  <div class="well" style="display:none" id="resulat_bloc"><h4 id="simulation" align="center"></h4></div>
+	
+  		<div class='actions'><center><button type="button" id= "myBtn" class="btn btn-primary btn-md" onclick="simulation();modal_open();" disabled>Calculer</button></center></div>
+  	</form>
   
+
+  	<!-- Modal budget-->
+	<div class="modal fade" id="modalbudget" tabindex="-1" role="dialog" aria-labelledby="modalbudget" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">Estimation de votre budget</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+
+
+
+	        <div id="simulation"></div>
+
+
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 </div>
 
-<script>
+
+<script> //modal
+function modal_open(){
+    $("#modalbudget").modal();
+  }
+</script>
+
+<script> //active bouton si champs remplis
+$(document).ready(function() {
+  $('.col-md-4 input').on('keyup', function() {
+    let empty = false;
+
+    $('.col-md-4 input').each(function() {
+      empty = $(this).val().length == 0;
+    });
+
+    if (empty)
+      $('.actions button').attr('disabled', 'disabled');
+    else
+      $('.actions button').attr('disabled', false);
+  });
+});
+</script>
+
+<script> //calcule le budget, les mensualités, ...
 function simulation() {
   var revenus = parseFloat(document.getElementById("revenus").value);
   var taux_endettement_visé = parseFloat(document.getElementById("taux_endettement_visé").value)/100;
@@ -122,16 +232,17 @@ function simulation() {
   
   var mensualité = revenus * taux_endettement;
   var montant_empruntable = parseInt(mensualité*12/(taux_intérêt + taux_assurance)*(1-(1+(taux_intérêt + taux_assurance)/12)**(-12*durée)));
-  var budget = parseInt((apport+montant_empruntable-frais_fixes)/(1+frais_notaire));
-  document.getElementById('resulat_bloc').style.display='block';
-  document.getElementById('simulation').innerHTML = "Votre budget est de "+budget+" euros. Cela correspond à un emprunt de "+montant_empruntable+" euros remboursé avec des mensualités de "+mensualité.toFixed(1)+" euros.";
-  }
-</script>
 
-<script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip(); 
-});
+  var budget = parseInt((apport+montant_empruntable-frais_fixes)/(1+frais_notaire));
+  const numberFormat1 = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });  
+
+  document.getElementById('simulation').innerHTML = "Votre budget est de <b>"+numberFormat1.format(budget)+"</b> . <br><br> Il est composé d'un apport de <b>"+numberFormat1.format(apport)+"</b> et d'un emprunt de <b>"+numberFormat1.format(montant_empruntable)+"</b>.<br><br>L'ensemble des frais (intérêts, assurance, frais de notaire, ...) représentera un montant de <b>"+numberFormat1.format(montant_empruntable+apport-budget)+"</b>.<br><br> Vos mensualités de remboursement d'emprunt s'élèveront à <b>"+numberFormat1.format(mensualité)+"</b>.";
+
+
+  }
+
+  
+
 </script>
 
 <!--Bottom Footer-->

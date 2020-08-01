@@ -4,6 +4,7 @@
 <title>Contacts utiles</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style_footer.css">
+	<link rel="stylesheet" href="style_contacts_utiles.css">
 	<link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<link rel="icon" href="favicon.ico" />
@@ -44,8 +45,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="simulation_budget.html">Estimez votre budget</a>
-            <a class="dropdown-item" href="#">Acheter ou louer</a>
-            <a class="dropdown-item" href="#">Votre plan de financement</a>
+            <a class="dropdown-item" href="simulation_acheterlouer.html">Acheter ou louer</a>
+            <a class="dropdown-item" href="simulation_plan.html">Votre plan de financement</a>
           </div>
         </li>
         <li class="nav-item">
@@ -58,39 +59,219 @@
 
 <!-- Contacts utiles : Courtiers, Site de recherche de logements neufs/anciens, Sites pour estimer le prix d'un bien--> 
 
-<body style="padding-top: 70px;font-family:'Roboto';">
+<body style="padding-top: 70px;font-family:Roboto">
 
 <div class="container" style="padding-bottom:5vh;min-height:700px;">
     <div class="page-header">
-        <center style="font-family: 'Crimson Text';font-size:10vh;padding-top:10vh;padding-bottom:8vh">Contacts utiles</center>
+        <center style="font-family: 'Crimson Text';font-size:10vh;padding-top:10vh;padding-bottom:6vh">Contacts utiles</center>
     </div>
 
-
+    
     <div class="container">
-	  <div class="row" style="margin: 15px;">
-	    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-	      <img src="recherche_bien.jpg" class="img-fluid rounded"> <!-- Immo ancien--> 
-	    </a>
-	    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-	      <img src="prix_marché.jpg" class="img-fluid rounded"> <!-- Immo neuf--> 
-	    </a>
-	    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-	      <img src="immo_map.jpg" class="img-fluid rounded"> <!-- Carte prix, nuisances sonores... --> 
-	    </a>
-	  </div>
-	  <div class="row" style="margin: 15px;">
-	    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-	      <img src="books.jpg" class="img-fluid rounded"> <!-- Recommandations de professionnels & blogs pro--> 
-	    </a>
-	    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-	      <img src="agent.jpg" class="img-fluid rounded"> <!-- Après votre emménagement--> 
-	    </a>
-	    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-	      <img src="banque.jpg" class="img-fluid rounded"> <!-- Banques & prêts--> 
-	    </a>
-	  </div>
-	</div>
+	    <div class="row" style="margin: 15px;">
 
+	    	<!-- Div Chercher un bien ancien-->
+		    <div data-toggle="lightbox" data-gallery="gallery" class="col-md-4 img__wrap" style="padding:1vw;margin:0;">
+		        <img src="recherche_bien.jpg" style="width:100%;"> <!-- Immo ancien--> 
+		        <div class="img__description_layer">
+	    		    <center><a class="img__description" data-toggle="modal" data-target="#exampleModalLong" style="cursor:pointer;"><p style="margin-bottom:10px;">Chercher un bien ancien</p>
+	    		    	<svg width="20%" height="20%" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
+					</svg>
+	    		    </a></center>   
+	    		</div>
+	    	</div>
+
+	    	<!-- Modal Chercher un bien ancien-->
+			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">Chercher un bien ancien</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        Si vous cherchez un bien ancien, nous vous recommandons les sites ci-dessous : 
+			      	<ul>
+			      		<li><a target="_blank" rel="noopener noreferrer" href = "https://www.seloger.com/immobilier/"> Se Loger</a></li>
+			      		<li><a target="_blank" rel="noopener noreferrer" href = "https://immobilier.lefigaro.fr/"> Figaro immo</a></li>
+			        </ul>
+			        Nous vous conseillons également de consulter le site d'agences immobilières présentes dans la zone géographique de votre projet. <br><br> Si vous souhaitez éviter de passer par une agence, le site <a target="_blank" rel="noopener noreferrer" href = "https://www.seloger.com/immobilier/">Particulier à Particulier PAP.fr</a> vous permettra de vous adresser directement à des particuliers.
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Div Chercher un bien neuf-->
+		    <div data-toggle="lightbox" data-gallery="gallery" class="col-md-4 img__wrap" style="padding:1vw;margin:0;">
+		      <img src="prix_marché.jpg" style="width:100%;"> <!-- Immo neuf--> 
+		      <div class="img__description_layer">
+	    		    <center><a class="img__description" data-toggle="modal" data-target="#exampleModalLong1" style="cursor:pointer;"><p style="margin-bottom:10px;">Chercher un bien neuf</p>
+	    		    	<svg width="20%" height="20%" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
+					</svg></a></center>
+	    		</div>
+		    </div>
+
+		    <!-- Modal Chercher un bien neuf-->
+			<div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle1" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle1">Chercher un bien neuf</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	Si vous cherchez un bien neuf, nous vous recommandons les deux sites ci-dessous : 
+			      	<ul>
+			      		<li><a target="_blank" rel="noopener noreferrer" href = "https://www.selogerneuf.com/immobilier/"> Se Loger neuf</a></li>
+			        	<li><a target="_blank" rel="noopener noreferrer" href = "https://www.immoneuf.com"> Immoneuf</a></li>
+			        </ul>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Div Cartographie des prix-->
+		    <div data-toggle="lightbox" data-gallery="gallery" class="col-md-4 img__wrap" style="padding:1vw;margin:0;">
+		      <img src="immo_map.jpg" style="width:100%;"> <!-- Carte prix, nuisances sonores... --> 
+		      <div class="img__description_layer">
+	    		    <center><a class="img__description" data-toggle="modal" data-target="#exampleModalLong2" style="cursor:pointer;"><p style="margin-bottom:10px;">Cartographie des prix</p>
+	    		    	<svg width="20%" height="20%" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
+					</svg></a></center>
+	    		</div>
+		    </div>
+
+		    <!-- Modal Cartographie des prix -->
+			<div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle2" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle2">Cartographie des prix</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	Il est important de disposer d'outils fiables permettant d'évaluer le prix d'un bien immobilier. Ceux-ci s'avèreront précieux lors d'une négociation afin d'éviter de payer le prix fort un bien qui ne le vaut pas.<br><br>
+			        Nous vous recommandons à cette fin le site <a target="_blank" rel="noopener noreferrer" href = "https://www.seloger.com/immobilier/"> MeilleursAgents </a> qui vous permettra de simuler le prix d'un bien qui vous intéresse en fonction de ses caractéristiques (adresse, surface, prestations, ...).<br><br>
+			        Lancé fin avril 2019, la <a target="_blank" rel="noopener noreferrer" href = "https://app.dvf.etalab.gouv.fr">Base Demande de Valeur Foncière (DVF)</a> est un autre outil à votre disposition. Prenant la forme d’une plateforme en ligne, elle fournit les prix des transactions immobilières de biens construits (appartements et maisons) ou vierges (terrains nus) depuis 2015. 
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	    </div>
+
+	    <div class="row" style="margin: 15px;">
+
+	    	<!-- Div Recommandations de professionnels-->
+		    <div data-toggle="lightbox" data-gallery="gallery" class="col-md-4 img__wrap" style="padding:1vw;margin:0;">
+		      <img src="books.jpg" style="width:100%;"> <!-- Recommandations de professionnels & blogs pro--> 
+		      <div class="img__description_layer">
+	    		    <center><a class="img__description" data-toggle="modal" data-target="#exampleModalLong3" style="cursor:pointer;"><p style="margin-bottom:10px;">Recommandations de professionnels</p>
+	    		    	<svg width="20%" height="20%" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
+					</svg></a></center>
+	    		</div>
+		    </div>
+
+		    <!-- Modal Recommandations de professionnels-->
+			<div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle3" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle3">Recommandations de professionnels</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        En construction...
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Div Après votre emménagement-->
+		    <div data-toggle="lightbox" data-gallery="gallery" class="col-md-4 img__wrap" style="padding:1vw;margin:0;">
+		      <img src="agent.jpg" style="width:100%;"> <!-- Après votre emménagement--> 
+		      <div class="img__description_layer">
+	    		    <center><a class="img__description" data-toggle="modal" data-target="#exampleModalLong4" style="cursor:pointer;"><p style="margin-bottom:10px;">Après votre emménagement</p>
+	    		    	<svg width="20%" height="20%" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
+					</svg></a></center>
+	    		</div>
+		    </div>
+
+		    <!-- Modal Après votre emménagement-->
+			<div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle4" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle4">Après votre emménagement</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        En construction ...
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Div Banques & prêts-->
+		    <div data-toggle="lightbox" data-gallery="gallery" class="col-md-4 img__wrap" style="padding:1vw;margin:0;">
+		      <img src="banque.jpg" style="width:100%;"> <!-- Banques & prêts--> 
+		      <div class="img__description_layer">
+	    		    <center><a class="img__description" data-toggle="modal" data-target="#exampleModalLong5" style="cursor:pointer;"><p style="margin-bottom:10px;">Banques & prêts</p>
+	    		    	<svg width="20%" height="20%" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
+					</svg></a></center>
+	    		</div>
+		    </div>
+
+		    <!-- Modal Banques & prêts-->
+			<div class="modal fade" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle5" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle5">Banques & prêts</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        En construction ...
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	    </div>
+	</div>
 </div>
 
 

@@ -54,31 +54,38 @@ function showPage() {
 	<!-- Menu -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id = "navbar1" style="background-color:rgb(11,26,33);">
-	  <div class="container">
-	    <a class="navbar-brand" href="#" style="font-family: 'Crimson Text';">
-	          <h2>Vesca</h2>
-	        </a>
-	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-	          <span class="navbar-toggler-icon"></span>
-	        </button>
-	    <div class="collapse navbar-collapse" id="navbarResponsive">
-	      <ul class="navbar-nav ml-auto">
-	        <li class="nav-item">
-	          <a class="nav-link" href="#accueil">Accueil</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#guides">Guides</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#simulateurs">Simulateurs</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#contact">Contact</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </div>
+		<div class="container">
+		    <a class="navbar-brand" href="#" style="font-family: 'Crimson Text';">
+		        <h2>Vesca</h2>
+		    </a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+		        <ul class="navbar-nav ml-auto">
+		            <li class="nav-item">
+		                <a class="nav-link" href="#accueil">Accueil</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="#guides">Guides</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="#simulateurs">Simulateurs</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="#contact">Contact</a>
+		            </li>
+		        </ul>
+		    </div>
+		</div>
 	</nav>
+
+	<!--navbar closes on click-->
+	<script>
+		$('.navbar-nav>li>a').on('click', function(){
+	    $('.navbar-collapse').collapse('hide');
+	});
+	</script>
 
 	<div class="bg-image" id="accueil"></div>
 
@@ -89,7 +96,7 @@ function showPage() {
 	
 	<!-- Section Guides  -->
 
-	<div class = "container justify-content-center" style="padding-top: 10vh" id="guides">
+	<div class = "container justify-content-center" style="padding-top: 10vh;" id="guides">
 		<center><p style="color:white;font-family: 'Crimson Text';font-size:10vh;">Guides</p></center>
 		<div>
 			<center><p style="color:white;font-size:3vh;padding-right:5%;padding-left:5%">Vous êtes novice dans le monde de l'immobilier ? Vous cherchez à apprendre les bases ? Pas de souci ! Les guides ci-dessous sont là pour vous aider.</p></center>
@@ -124,32 +131,32 @@ function showPage() {
 			<div class="col-md-4" style="padding:5vh;">
 				<img src="money-bag.png" alt="Argent" style="width:100%;">
 				<hr>
-				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Estimez votre budget</a>
+				<a href="simulation_budget.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Estimez votre budget</a>
 			</div>
 			<div class="col-md-4" style="padding:5vh;">
 				<img src="comparison.png" alt="Balance" style="width:100%;">
 				<hr>
-				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Acheter ou louer</a>
+				<a href="simulation_acheterlouer.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Acheter ou louer</a>
 			</div>
 			<div class="col-md-4" style="padding:5vh;">
 				<img src="speedometer.png" alt="Cadrant" style="width:100%;">
 				<hr>
-				<a href="guide_timeline.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Votre plan de financement</a>
+				<a href="simulation_plan.html" type="button" class="btn btn-primary btn-lg" style="width:100%;">Votre plan de financement</a>
 			</div>
 		</div>
 	</div>
 
 	<!--Contact-->
 
-	<div class = "row justify-content-center" style="margin-top: 10vh;background-image:url(blured_skyline.jpg);height:100%;width:100%;background-position: center;background-repeat: no-repeat;background-size: cover;" id="contact">
-		<div class="align-self-center">
+	<div style="margin-top: 10vh;background-image:url(blured_skyline.jpg);height:100%;width:100%;background-position: center;background-repeat: no-repeat;background-size: cover;vertical-align:middle;" id="contact">
+		
 			<center><p style="color:white;font-family: 'Crimson Text';font-size:10vh;">Contact</p></center>
 			<center><p style="color:white;font-size:3vh;padding-right:5%;padding-left:5%;padding-bottom:3vh">Vous avez des questions ? Des suggestions ? Ou des idées d'améliorations ?</p></center>
 
 			<center><a class="typeform-share button btn-primary" href="https://form.typeform.com/to/OnCJDoro" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#87593F;color:white;cursor:pointer;font-family:Roboto,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:7px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Nous écrire </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script><center>
-			</div>
+		
 	</div>
-	
+
 	<!--Bottom Footer-->
 	<div class="bottom section-padding">
 		<div class="container">

@@ -1,12 +1,14 @@
-body, html {
-	font-family: 'Roboto';
+.btn-primary, .btn-primary:active, .btn:focus, .btn-primary:visited {
+    background-color: rgb(11,26,33) !important;
+    border:none;
+    font-size:3vh;
 }
 
-@media (max-width: 768px) {
-.navbar-brand
-    {
-		transform: translateX(-25%) translateY(-5%);
-    }
+.btn-primary:hover{
+    background-color: rgb(64,82,86) !important;
+    border:none;
+    font-size:3vh;
+    outline: none !important;
 }
 
 

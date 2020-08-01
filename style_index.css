@@ -1,8 +1,20 @@
 body, html {
 	background-color: rgb(11,26,33);
 	height: 100%;
-	margin: 0;
 	font-family: 'Roboto';
+}
+
+/*Align elements vertically in "contact" section */
+#contact {
+  /* make element inline flex-container */
+  /* this will make its children flex-items */
+  display: inline-flex;
+  /* align-items items in column */
+  flex-direction: column;
+  /* center items horizontally */
+  align-items: center;
+  /* center items vertically */
+  justify-content: center;
 }
 
 /*Avoid navbar collapse error*/
