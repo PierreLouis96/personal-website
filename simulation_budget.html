@@ -13,6 +13,14 @@
 	<meta name="author" content="Pierre-Louis Schnitzler">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MT8583S');</script>
+	<!-- End Google Tag Manager -->
 </head>
 
 <!-- Menu -->
@@ -59,6 +67,10 @@
 </nav>
 
 <body style="padding-top: 70px;font-family:Roboto">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT8583S"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
 <div class="container" style="padding-bottom:5vh;min-height:100vh;">
     <div class="page-header">
@@ -395,7 +407,7 @@ function simulation() {
   var budget = parseInt((apport+montant_empruntable-frais_fixes)/(1+frais_notaire));
   const numberFormat1 = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });  
 
-  document.getElementById('simulation').innerHTML = "Votre budget est de <b>"+numberFormat1.format(budget)+"</b> . <br><br> Il est composé d'un apport de <b>"+numberFormat1.format(apport)+"</b> et d'un emprunt de <b>"+numberFormat1.format(montant_empruntable)+"</b>.<br><br>L'ensemble des frais (intérêts, assurance, frais de notaire, ...) représentera un montant de <b>"+numberFormat1.format(montant_empruntable+apport-budget)+"</b>.<br><br> Vos mensualités de remboursement d'emprunt s'élèveront à <b>"+numberFormat1.format(mensualité)+"</b>.";
+  document.getElementById('simulation').innerHTML = "Votre budget est de <b>"+numberFormat1.format(budget)+"</b> . <br><br> Il est composé d'un apport de <b>"+numberFormat1.format(apport)+"</b> et d'un emprunt de <b>"+numberFormat1.format(montant_empruntable)+"</b>.<br><br>L'ensemble des frais (intérêts, assurance, frais de notaire, ...) représentera un montant de <b>"+numberFormat1.format(frais_fixes+budget*frais_notaire+mensualité*12*durée-montant_empruntable)+"</b>.<br><br> Vos mensualités de remboursement d'emprunt s'élèveront à <b>"+numberFormat1.format(mensualité)+"</b>.";
 
 
   }
