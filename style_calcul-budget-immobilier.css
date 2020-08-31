@@ -1,0 +1,36 @@
+.btn-primary{
+	display:inline-block;
+	text-decoration:none;
+	background-color:#87593F;
+	color:white;
+	cursor:pointer;
+	font-family:Roboto,sans-serif;
+	font-size:20px;
+	line-height:50px;
+	text-align:center;
+	margin:0;
+	height:50px;
+	padding:0px 33px;
+	border-radius:7px;
+	max-width:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+.btn-primary, .btn-primary:active, .btn:focus, .btn-primary:visited {
+    background-color: rgb(11,26,33) !important;
+    border:none;
+    font-size:3vh;
+}
+
+.btn-primary:hover{
+    background-color: rgb(64,82,86) !important;
+    border:none;
+    font-size:3vh;
+    outline: none !important;
+}
+
+

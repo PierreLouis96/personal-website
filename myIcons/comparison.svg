@@ -1,0 +1,19 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with UXWing SVG Editor - https://uxwing.com/svg-icon-editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="302" width="302" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#000000" id="svg_1" d="m276.000033,0.125l-253.00003,0c-12.696001,0 -23.000003,5.755077 -23.000003,12.846154l0,141.307693c0,7.091077 10.304001,12.846154 23.000003,12.846154l253.00003,0c12.696001,0 23.000003,-5.755077 23.000003,-12.846154l0,-141.307693c0,-7.091077 -10.304001,-12.846154 -23.000003,-12.846154zm-184.356522,151.944308l-46.000005,0l0,-89.923077l46.000005,0l0,89.923077zm-23.000003,-99.557693c-15.904502,0 -28.750003,-7.187423 -28.750003,-16.057692s12.845502,-16.057692 28.750003,-16.057692s28.750003,7.187423 28.750003,16.057692s-12.845502,16.057692 -28.750003,16.057692zm184.000022,99.557693l-46.000005,0l0,-54.596154c0,-2.569231 -4.634501,-6.776346 -7.900501,-7.791192c-4.312501,-1.355269 -14.501502,-1.470885 -19.147502,-0.218385l-18.952002,5.0935l0,57.512231l-46.000005,0l0,-89.923077l46.000005,0l0,3.943769c18.204502,-4.643885 43.470005,-4.187846 60.605007,1.181846c18.193002,5.690846 31.395004,18.395692 31.395004,30.201308l0,54.596154z" stroke-opacity="0" stroke-width="0" fill="#ffffff"/>
+  <rect id="svg_2" height="148" width="240" y="10.78125" x="25.5" stroke-width="0" fill="#ffffff"/>
+  <text style="cursor: move;" font-weight="normal" font-style="normal" xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="30" id="svg_3" y="63.78125" x="69.5" stroke-width="0" fill="#000000">ACHETER</text>
+  <text font-weight="normal" font-style="normal" xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="30" id="svg_4" y="110.78125" x="92.5" stroke-width="0" fill="#000000">LOUER</text>
+  <path stroke="null" transform="rotate(90 257.99804687500006,53.14063262939455) " id="svg_5" d="m243.49805,53.077026l14.5,-26.436396l14.5,26.436396l-7.25,0l0,26.563603l-14.499999,0l0,-26.563603l-7.25,0z" stroke-width="0" fill="#0b1a20"/>
+  <path stroke="null" transform="rotate(90 53.99804687499999,100.14063262939455) " id="svg_11" d="m39.49805,100.209036l14.5,28.431595l14.5,-28.431595l-7.250001,0l0,-28.568402l-14.499999,0l0,28.568402l-7.25,0z" stroke-width="0" fill="#0b1a20"/>
+  <rect id="svg_12" height="161" width="12" y="162.78125" x="89.5" stroke-width="0" fill="#ffffff"/>
+  <rect id="svg_13" height="161" width="12" y="162.78125" x="197.5" stroke-width="0" fill="#ffffff"/>
+ </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with UXWing SVG Editor - https://uxwing.com/svg-icon-editor/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="302" width="302" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#000" transform="rotate(-90 59.73250579833985,42.974174499511726) " id="svg_29" d="m40.73251,56.474199l19,-27l18.99999,27l-37.99999,0z" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_30" height="86" width="229.000005" y="0.783046" x="71.500001" stroke-opacity="null" stroke-width="0" fill="#ffffff"/>
+  <path stroke="#000" transform="rotate(-90 59.73250579833991,258.4404907226563) " id="svg_15" d="m40.73251,271.94049l19,-27l18.99999,27l-37.99999,0z" stroke-width="0" fill="#ffffff"/>
+  <ellipse ry="20.5" rx="20.5" id="svg_12" cy="258.28125" cx="21" stroke-width="0" stroke="#000" fill="#ffffff"/>
+  <path stroke="#000" transform="rotate(-90 59.73250579833988,149.97239685058597) " id="svg_14" d="m40.73251,163.472403l19,-27l18.99999,27l-37.99999,0z" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_7" height="86" width="229.000005" y="107.78125" x="71.500001" stroke-opacity="null" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_8" height="86" width="229" y="214.78125" x="71.500006" stroke-opacity="null" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_9" height="301.999987" width="16.999985" y="-1.21875" x="12.500021" stroke-opacity="null" stroke-width="0" fill="#ffffff"/>
+  <ellipse ry="20.5" rx="20.5" id="svg_10" cy="42.39392" cx="21" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#ffffff"/>
+  <ellipse ry="20.5" rx="20.5" id="svg_11" cy="150.597041" cx="21" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#ffffff"/>
+  <rect stroke="#0b1a21" id="svg_16" height="13" width="148" y="25.78125" x="108.5" stroke-width="0" fill="#000"/>
+  <rect stroke="#0b1a21" id="svg_17" height="13" width="114.000003" y="45.78125" x="108.5" stroke-width="0" fill="#000"/>
+  <rect stroke="#0b1a21" id="svg_18" height="13" width="148" y="132.78125" x="108.5" stroke-width="0" fill="#000"/>
+  <rect stroke="#0b1a21" id="svg_19" height="13" width="114.000003" y="152.78125" x="108.5" stroke-width="0" fill="#000"/>
+  <rect stroke="#0b1a21" id="svg_20" height="13" width="114.000003" y="260.78125" x="108.5" stroke-width="0" fill="#000"/>
+  <rect stroke="#0b1a21" id="svg_21" height="13" width="148" y="240.78125" x="108.5" stroke-width="0" fill="#000"/>
+  <ellipse ry="6.5" rx="6.5" id="svg_23" cy="42.39392" cx="21" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#0b1a21" fill="#000"/>
+  <ellipse stroke="#0b1a21" ry="6.5" rx="6.5" id="svg_24" cy="150.597041" cx="21" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000"/>
+  <ellipse ry="6.5" rx="6.5" id="svg_25" cy="258.28125" cx="21" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#0b1a21" fill="#000"/>
+ </g>
+</svg>
